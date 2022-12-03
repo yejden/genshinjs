@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(185, 212, 230);
+    font-family: sans-serif;
+}
+
+header {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+}
+
+main {
+    margin: 0x;
+}
+
+img {
+    width: 100%;
+}
+
+#h2 {
+    position: absolute;
+    text-align: center;
+    font-size: 2em;
+    top: 1.2em;
+    left: 330px;
+    background-color: aliceblue;
+    width: 250px;
+    height: 80px;
+    padding: 0em 1em;
+    border: 3px solid black;
+    border-radius: 1em;
+
+}
+
+.speelruimte {
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+#energyprocent {
+    position: absolute;
+    top: 28px;
+    left: 120px;
+    font-size: 1.8em;
+}
+
+#punten {
+    position: absolute;
+    top: 84px;
+    left: 72px;
+    font-size: 1.8em;
+
+}
+
+#kiesman {
+    position: absolute;
+    overflow: hidden;
+    width: 200px;
+    height: 300px;
+    top: 150px;
+    left: 220px;
+}
+
+#kiesvrouw {
+    position: absolute;
+    overflow: hidden;
+    width: 200px;
+    height: 300px;
+    top: 150px;
+    left: 570px;
+}
+
+#useprimo {
+    position: absolute;
+    cursor: pointer;
+    left: 410px;
+    bottom: 120px;
+    width: 170px;
+}
+
+#karakter {
+    position: absolute;
+    bottom: 20px;
+    left: 625px;
+    width: 135px;
+}
+
+#restplace {
+    position: absolute;
+    cursor: pointer;
+    bottom: 120px;
+    left: 50px;
+    width: 200px;
+}
+
+#puzzle {
+    position: absolute;
+    bottom: 200px;
+    left: 320px;
+    width: 350px;
+}
+
+#workplace {
+    position: absolute;
+    cursor: pointer;
+    bottom: 120px;
+    right: 50px;
+    width: 180px;
+
+}
+
+#energybar {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 300px;
+}
+
+#primobar {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    width: 125px;
+}
+
+#stopspel {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 10px;
+    width: 50px;
+}
+
+#feedback {
+    position: absolute;
+    background-color: aliceblue;
+    bottom: 200px;
+    left: 360px;
+    width: 250px;
+    height: 30px;
+    padding: 0em 1em;
+    border: 3px solid black;
+    border-radius: 1em;
+    font-size: 1.2em;
+
+}
+
+/* js en css class schud linken */
+#restplace.schud {
+    animation: 0.5s schud infinite;
+}
+
+#workplace.schud {
+    animation: 0.5s schud infinite;
+}
+
+#useprimo.schud {
+    animation: 0.5s schud infinite;
+}
+
+#stopspel.schud {
+    animation: 0.5s schud infinite;
+}
+
+#karakter.gowork {
+    animation: 1.5s gowork ease;
+}
+
+#karakter.gorest {
+    animation: 1.7s gorest ease;
+}
+
+#puzzle.schud {
+    animation: 0, 2s schud infinite;
+}
+
+.bron {
+    margin-top: 25px;
+    font-size: 0.75em;
+}
+
+/* Animaties voor restplace en workplace, om duidelijk te maken dat die klikbaar zijn */
+
+@keyframes schud {
+    0% {
+        transform: rotate(2, 5deg)
+    }
+
+    25% {
+        transform: rotate(5deg)
+    }
+
+    50% {
+        transform: rotate(2, 5deg)
+    }
+
+    75% {
+        transform: rotate(-5deg)
+    }
+
+    100% {
+        transform: rotate(2, 5deg)
+    }
+}
+
+@keyframes gowork {
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(130px)
+    }
+}
+
+@keyframes gorest {
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(-500px)
+    }
+}
